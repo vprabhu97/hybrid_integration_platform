@@ -4,4 +4,5 @@ WORKDIR /TE_pyexporter
 COPY requirements.txt /TE_pyexporter
 RUN pip install -r requirements.txt
 COPY hip-products.py /TE_pyexporter
+EXPOSE 5000
 ENTRYPOINT [ "python", "-u", "./hip-products.py"]
