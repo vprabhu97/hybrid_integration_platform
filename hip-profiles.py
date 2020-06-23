@@ -1,22 +1,26 @@
-from flask import Flask
+from flask import Flask,render_template
 import json
 #test comment added
 app = Flask(__name__)
+data = {
+        "profile1": {
+                "name": "John",
+                "email": "john123@gmail.com"
+                },
+        "profile2": {
+                "name": "Matthew",
+                "email": "matthew123@gmail.com"
+                }
+                }  
 #hello function
 @app.route("/")
-def hello():
-        data = {
-                    "profile1": {
-                                "name": "Vinayak",
-                                "email": "vprabhu97@gmail.com"
-                                            },
-                        "profile2": {
-                                    "name": "Krishna",
-                                    "email": "krishna123@gmail.com"
-                                                }
-                            }   
-            return data
+def hello():	
+    return render_template('index.html', message=data)
+
+@app.route('/getdata')
+def hello_name():
+    return data
 
 
-        if __name__ == '__main__':
-                app.run(debug=True,host='0.0.0.0')
+if __name__ == '__main__':
+        app.run(debug=True,host='0.0.0.0',port=5000)
