@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flask Template Example</title>
+  </head>
+  <body>
+    <div>
+      <h2>Hello World! This is my first containerized application deployed on Elastic Beanstalk</h2>
+      <h2>Welcome to the Products home page</h2>
+      <h3>Product data:</h3>
+      <table border="1|0">
+      <tr><td> <b>Name</b> </td><td> <b>Species</b></td></tr>
+      <tr><td>{{ message['product1']['name'] }}</td> <td>{{ message['product1']['email'] }}</td></tr>
+      <tr><td>{{ message['product2']['name'] }}</td> <td>{{ message['product2']['email'] }}</td></tr>
+      </table>
+    </div>
+  </body>
+</html>
