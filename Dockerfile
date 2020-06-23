@@ -7,3 +7,4 @@ COPY hip-products.py /TE_pyexporter
 COPY templates /TE_pyexporter/templates
 EXPOSE 5000
 ENTRYPOINT [ "python", "-u", "./hip-products.py"]
+
